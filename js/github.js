@@ -24,11 +24,12 @@ const profileSection = document.querySelector("#profile");
 async function loadProfile() {
 
     try {
-
         const response = await fetch(`https://api.github.com/users/${username}`);
 
         if (!response.ok) {
-            throw new Error("Unable to load GitHub profile.");
+            const error = await response.text();
+            console.log(error);
+            throw new Error(`GitHub returned ${response.status}`);
         }
 
         const user = await response.json();
@@ -66,24 +67,18 @@ async function loadProfile() {
                             <span>${user.following}</span>
                             <small>Following</small>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
         `;
-
     }
 
     catch (error) {
-
         profileSection.innerHTML = `
             <p>${error.message}</p>
         `;
 
         console.error(error);
-
     }
 
 }
@@ -91,7 +86,6 @@ async function loadProfile() {
 const repositoryList = document.querySelector("#repository-list");
 
 async function getLanguages(url) {
-
     const response = await fetch(url);
 
     if (!response.ok) {
@@ -101,13 +95,11 @@ async function getLanguages(url) {
     const languages = await response.json();
 
     return Object.keys(languages);
-
 }
 
 async function loadRepositories() {
 
     try {
-
         const response = await fetch(
             `https://api.github.com/users/${username}/repos?per_page=100`
         );
@@ -179,16 +171,13 @@ async function loadRepositories() {
                 </a>
             `;
         };
-
     }
 
     catch (error) {
-
         repositoryList.innerHTML =
             `<p>${error.message}</p>`;
 
         console.error(error);
-
     }
 
 }

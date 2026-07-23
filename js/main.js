@@ -9,9 +9,28 @@ document.addEventListener("mousemove", (event) => {
 const content = document.querySelector(".content");
 const scrollTopButton = document.querySelector(".scroll-top");
 
-scrollTopButton.addEventListener("click", () => {
-    content.scrollTo({
-        top: 0,
-        behavior: "smooth"
+if (scrollTopButton) {
+
+    scrollTopButton.addEventListener("click", () => {
+
+        const content = document.querySelector(".content");
+
+        if (content) {
+
+            content.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        } else {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
     });
-});
+
+}
