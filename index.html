@@ -6,6 +6,10 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/landingPage.css">
     <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 </head>
 
 <body>
@@ -14,7 +18,7 @@
             <!--Insert pfp here-->
             <h1><a href="index.html">Graham Robert</a></h1>
             <h2>Junior Software Engineer</h2>
-            <p>My motto: Excellence without exception.</p>
+            <p>Motto: Excellence without exception.</p>
 
             <nav class="side-nav">
                 <a href="#about">About me</a>
@@ -25,11 +29,21 @@
         </section>
 
         <section>
-            <p>View my Github Dashboard</p>
-            <ul>
-                <li>Github</li>
-                <li>LinkedIn</li>
-            </ul>
+            <a class="github-dashboard" href="pages/github.html">
+                View my GitHub Dashboard →
+            </a>
+            <div class="social-links">
+                <a href="https://github.com/lSiphonl"
+                target="_blank"
+                aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/graham-robert-880955367?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+                aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
         </section>
     </header>
 
@@ -39,7 +53,7 @@
                 <p>
                     Hi, first of all, thank you for taking the time to visit my website!
                     I'm a Junior Software Engineer with a burning passion for developing innovative, efficient, and well-designed software solutions
-                    with integrated Artificial Intelligence, as well as the need to learn more. 
+                    with integrated Artificial Intelligence. I really enjoy learning and finding new, better ways to get to a solution. 
                 </p>
 
                 <p>
@@ -55,178 +69,271 @@
 
                 <p>
                     In short, I'm the person who loves the struggle, the dificult tasks, the intimidation of complexity.
-                    Whatever the size of the mountain may be, I'll climb it, or at least find a way through it.
+                    <b>Whatever the size of the mountain may be, I'll climb it, or at least find a way through it.</b>
                 </p>
+                <hr>
             </section>
 
-            <section id="experience"> <!--Experience Section-->
+            <section id="experience">
                 <h3>Experience</h3>
-                <section>
-                    <h4>Full-Stack Developer</h4>
-                    <h5>MayerField Consulting - 2026</h5>
-                    <p>Managed and worked with a team of 3 to develop
-                        scalable, responsive, and well-designed web solutions from games
-                        to useful applications. I also acted as intermediary between stakeholders and development team, communicating
-                        requirements and workflows.
-                    </p>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </section>
+                
+                <article class="portfolio-card">
+                    <span class="portfolio-date">
+                        2026
+                    </span>
 
-                <section>
-                    <h4>Course Representative - Computer Science & IT</h4>
-                    <h5>North-West University - 2026</h5>
-                    <p>Acted as intermediary between students/class representatives and lectures/employees for all computer science modules to find solutions
-                        to conflicts. The role also required the need for a lot of schedule planning for anything from events to tutors.
-                    </p>
-                    <ul>
-                        <li>Project Management</li>
-                        <li>Communication</li>
-                        <li>Leadership</li>
-                    </ul>
-                </section>
+                    <div class="portfolio-content">
+                        <h4>Full-Stack Developer</h4>
+                        <h5>MayerField Consulting</h5>
+                        <p>
+                            Managed and worked with a team of 3 to develop scalable,
+                            responsive, and well-designed web solutions from games to
+                            useful applications. I also acted as intermediary between
+                            stakeholders and the development team, communicating
+                            requirements and workflows.
+                        </p>
 
-                <section>
-                    <h4>Assistant for Advanced Web Development</h4>
-                    <h5>North-West University - 2025</h5>
-                    <p>
-                        Assisted in learning students advanced web development practices using
-                        the C# .NET and ASP.NET frameworks, as well as guiding them through the use of SQL for databases in web applications.
-                    </p>
-                    <ul>
-                        <li>C#</li>
-                        <li>.NET/ASP.NET</li>
-                        <li>SQL</li>
-                        <li>Leadership</li>
-                    </ul>
-                </section>
+                        <ul class="tech-stack">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </article>
 
-                <section>
-                    <h4>Workshops</h4>
-                    <ul>
-                        <li>University Cybersecurity WS '25</li>
-                        <li>AI Engineer WS '26</li>
-                    </ul>
-                </section>
+                <article class="portfolio-card">
+                    <span class="portfolio-date">
+                        2026
+                    </span>
+
+                    <div class="portfolio-content">
+                        <h4>Course Representative</h4>
+                        <h5>North-West University</h5>
+                        <p>
+                            Acted as intermediary between students and lecturers for all
+                            Computer Science modules while coordinating tutors,
+                            communication, and academic planning.
+                        </p>
+
+                        <ul class="tech-stack">
+                            <li>Leadership</li>
+                            <li>Communication</li>
+                            <li>Project Management</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <span class="portfolio-date">
+                        2025
+                    </span>
+
+                    <div class="portfolio-content">
+                        <h4>Assistant for Advanced Web Development</h4>
+                        <h5>North-West University</h5>
+                        <p>
+                            Assisted students with advanced web development using C#,
+                            ASP.NET and SQL while helping them understand software
+                            engineering concepts and debugging techniques.
+                        </p>
+
+                        <ul class="tech-stack">
+                            <li>C#</li>
+                            <li>.NET</li>
+                            <li>SQL</li>
+                            <li>Leadership</li>
+                        </ul>
+                    </div>
+                </article>
             </section>
+            <section>
+                <h4>Workshops</h4>
+                <ul>
+                    <li>University Cybersecurity WS '25</li>
+                    <li>AI Engineer WS '26</li>
+                </ul>
+            </section>
+            <hr>
+
             <!--Projects Section-->
             <section id="projects">
                 <h3>Portfolio Projects</h3>
-                <section>
-                    <h4>Relational Database System</h4>
-                    <p>Designed a relational database system, along with full documentation.
-                        The system showcased advanced software engineering practices, full CRUD functionality, good security,
-                        and a fully integrated MySQL database.
-                        I managed and was part of the team of 5 who developed the project over the period of
-                        February 2025 - September 2025 using SCRUM development.
-                    </p>
-                    <ul>
-                        <li>C#</li>
-                        <li>SQL</li>
-                        <li>Agile Development</li>
-                        <li>System Analysis and Design</li>
-                    </ul>
-                </section>
+                <article class="portfolio-card">
+                    <span class="portfolio-date">
+                        2025
+                    </span>
 
-                <section>
-                    <h4>Oracle Relational Database System</h4>
-                    <p>
-                        Led a team of seven in the design and development of a large-scale Oracle
-                        relational database system. Designed ERDs, relational schemas, normalization
-                        models, and business rules while coordinating GitHub collaboration and technical
-                        documentation throughout the project. Applied both SDLC and DBLC methodologies
-                        to the system's architecture and implementation.
-                    </p>
-                    <ul>
-                        <li>Oracle Database</li>
-                        <li>SQL</li>
-                        <li>DBLC</li>
-                        <li>SDLC</li>
-                    </ul>
-                </section>
+                    <div class="portfolio-content">
+                        <h4>Relational Database System</h4>
+                        <p>
+                            Designed and developed a relational database system with full CRUD
+                            functionality, comprehensive documentation, secure authentication,
+                            and a fully integrated MySQL database. Worked in a Scrum team of
+                            five over a seven-month development cycle.
+                        </p>
 
-                <section>
-                    <h4>AI Medical Symptom Diagnostic System</h4>
-                    <p>
-                        Developed an AI-powered medical diagnostic assistant capable of analysing
-                        user symptoms and predicting possible illnesses using a rule-based expert
-                        system. Designed and implemented symptom-analysis logic to simulate
-                        clinical decision-making.
-                    </p>
-                    <ul>
-                        <li>Python</li>
-                        <li>Artificial Intelligence</li>
-                        <li>Knowledge-Based Systems</li>
-                        <li>Rule-Based Reasoning</li>
-                    </ul>
-                </section>
+                        <ul class="tech-stack">
+                            <li>C#</li>
+                            <li>MySQL</li>
+                            <li>SCRUM</li>
+                            <li>System Analysis</li>
+                        </ul>
+                    </div>
+                </article>
 
-                <section>
-                    <h4>RESTful Web Service</h4>
-                    <p>
-                        Developed a RESTful API for managing employee information, supporting
-                        retrieval, updates, and deletion of records. Built using Java Spring Boot
-                        and thoroughly tested using Postman to ensure reliable endpoint functionality.
-                    </p>
+                <article class="portfolio-card">
+                    <span class="portfolio-date">
+                        2026
+                    </span>
 
-                    <ul>
-                        <li>Java</li>
-                        <li>Spring Boot</li>
-                        <li>REST API</li>
-                        <li>Postman</li>
-                        <li>Git</li>
-                    </ul>
-                </section>
-                <p>View full list of projects...</p>
+                    <div class="portfolio-content">
+                        <h4>Oracle Relational Database System</h4>
+                        <p>
+                            Led a team of seven in designing a large-scale Oracle database.
+                            Produced ERDs, relational schemas, normalization models, business
+                            rules, and coordinated development through GitHub while applying
+                            both SDLC and DBLC methodologies.
+                        </p>
+
+                        <ul class="tech-stack">
+                            <li>Oracle</li>
+                            <li>SQL</li>
+                            <li>DBLC</li>
+                            <li>SDLC</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <span class="portfolio-date">
+                        2026
+                    </span>
+
+                    <div class="portfolio-content">
+                        <h4>AI Medical Symptom Diagnostic System</h4>
+                        <p>
+                            Developed a rule-based AI expert system capable of analysing user
+                            symptoms and predicting possible illnesses. Simulated clinical
+                            decision-making using knowledge-based reasoning techniques.
+                        </p>
+
+                        <ul class="tech-stack">
+                            <li>Python</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Expert Systems</li>
+                            <li>Rule-Based AI</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <span class="portfolio-date">
+                        2026
+                    </span>
+
+                    <div class="portfolio-content">
+                        <h4>RESTful Web Service</h4>
+                        <p>
+                            Built a RESTful API using Java Spring Boot for managing employee
+                            information. Designed endpoints for CRUD operations and verified
+                            functionality using Postman while following REST architecture
+                            principles.
+                        </p>
+
+                        <ul class="tech-stack">
+                            <li>Java</li>
+                            <li>Spring Boot</li>
+                            <li>REST API</li>
+                            <li>Postman</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <p class="section-link">
+                    View Full Project Archive →
+                </p>
             </section>
 
-            <section id="education"> <!--Educational Background-->
+            <section id="education">
                 <h3>Education & Qualifications</h3>
-                <section>
-                    <h4>Degree</h4>
-                    <p>I completed my BSc IT degree over the period of
-                        2024-2026. I mastered many topics covered in my degree:
-                    </p>
-                    <ul>
-                        <li>OOP in Java - Distinction</li>
-                        <li>Data Structures & Algorithms in Java - Distinction</li>
-                        <li>Memory management in C++ - Exam Distinction</li>
-                        <li>Web Development in C# with SQL - Distinction</li>
-                        <li>Calculus and Discrete Mathematics - Distinction</li>
-                        <li>Advanced Database Engineering - Distinction</li>
-                        <li>System Analysis and Design</li>
-                        <li>Application Development in Python</li>
-                        <li>Advanced Statistics - Distinction</li>
-                    </ul>
-                </section>
+                <article class="portfolio-card">
+                    <span class="portfolio-date">
+                        2024-2026
+                    </span>
 
-                <section>
-                    <h5>Qualifications & Certificates</h5>
-                    <ul>
-                        <li>Full-Stack Development</li>
-                        <li>AI Engineer</li>
-                        <li>Front-end Web Development</li>
-                        <li>Comptia Sec+</li>
-                    </ul>
-                </section>
-                <p>View Full Description of Education...</p>
+                    <div class="portfolio-content">
+                        <h4>BSc Information Technology</h4>
+                        <h5>North-West University</h5>
+                        <p>
+                            Completed a Bachelor of Science in Information Technology with a
+                            strong focus on Software Engineering, Artificial Intelligence,
+                            Database Systems, Algorithms, Web Development, and Mathematics.
+                        </p>
 
-                <section>
-                    <h6>What I'm focusing on next</h6>
-                    <p>Next on my agenda is working on new projects, or refining simple projects and making them
-                        more innovative or adding more advanced features that stand out. Regarding my education, I am hoping to
-                        do my Honors in 2027, as well as get the following qualifications, because why not?
-                    </p>
-                    <ul>
-                        <li>Oracle Certified Java SE Developer</li>
-                        <li>Azure AI Engineer Associate</li>
-                        <li>AWS Certified ML Engineer Associate</li>
-                        <li>Certified Kubernetes Application Developer (CKAD)</li>
-                    </ul>
-                </section>
+                        <ul class="tech-stack">
+                            <li>Java</li>
+                            <li>C++</li>
+                            <li>Python</li>
+                            <li>C#</li>
+                            <li>SQL</li>
+                            <li>Software Engineering</li>
+                            <li>AI</li>
+                            <li>DSA</li>
+                            <li>Networks</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <span class="portfolio-date">
+                        2025- 2026
+                    </span>
+
+                    <div class="portfolio-content">
+                        <h4>Professional Qualifications</h4>
+                        <p>
+                            Alongside my university education, I continuously pursue
+                            professional certifications to strengthen my practical knowledge
+                            and remain up to date with modern software engineering and cloud
+                            technologies.
+                        </p>
+
+                        <ul class="tech-stack">
+                            <li>Full-Stack Development</li>
+                            <li>AI Engineer</li>
+                            <li>Front-End Development</li>
+                            <li>CompTIA Security+</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <span class="portfolio-date">
+                        Next
+                    </span>
+
+                    <div class="portfolio-content">
+                        <h4>Currently Working Towards</h4>
+                        <p>
+                            My current focus is building increasingly advanced software
+                            projects while pursuing industry-recognised certifications in
+                            Artificial Intelligence, Cloud Engineering, and Java
+                            development. I also plan to complete my Honours degree in 2027.
+                        </p>
+
+                        <ul class="tech-stack">
+                            <li>Java SE Developer</li>
+                            <li>Azure AI Engineer</li>
+                            <li>AWS ML Engineer</li>
+                            <li>CKAD</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <p class="section-link">
+                    View Full Education →
+                </p>
             </section>
         </main>
 
@@ -236,8 +343,9 @@
                 GitHub hosting.
             </p>
         </footer>
-        <button>^</button>
+        
     </div>
+    <button class="scroll-top">↑</button>
 </body>
 
 </html>

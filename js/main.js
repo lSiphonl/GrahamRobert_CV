@@ -5,3 +5,13 @@ document.addEventListener("mousemove", (event) => {
         `${event.clientY + window.scrollY}px`
     );
 });
+
+const content = document.querySelector(".content");
+const scrollTopButton = document.querySelector(".scroll-top");
+
+scrollTopButton.addEventListener("click", () => {
+    content.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
