@@ -90,6 +90,20 @@ async function loadProfile() {
 
 const repositoryList = document.querySelector("#repository-list");
 
+async function getLanguages(url) {
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+        return [];
+    }
+
+    const languages = await response.json();
+
+    return Object.keys(languages);
+
+}
+
 async function loadRepositories() {
 
     try {
@@ -124,12 +138,11 @@ async function loadRepositories() {
 
         repositoryList.innerHTML = "";
 
-        filteredRepositories.forEach(repository => {
+        for (const repository of filteredRepositories) {
 
             const updated = new Date(repository.updated_at);
-
+            const languages = await getLanguages(repository.languages_url);
             repositoryList.innerHTML += `
-
                 <a
                     href="${repository.html_url}"
                     class="repository-link"
@@ -150,38 +163,22 @@ async function loadRepositories() {
                         </div>
 
                         <div class="portfolio-content">
-
-                            <h4>${repository.name}</h4>
+                            <h4>${repository.displayTitle}</h4>
 
                             <p>
                                 ${repository.description ?? "No description provided."}
                             </p>
 
                             <ul class="tech-stack">
-
-                                ${
-                                    repository.language
-                                        ? `<li>${repository.language}</li>`
-                                        : ""
-                                }
-
-                                ${
-                                    repository.visibility
-                                        ? `<li>${repository.visibility}</li>`
-                                        : ""
-                                }
-
+                                ${languages
+                                    .map(language => `<li>${language}</li>`)
+                                    .join("")}
                             </ul>
-
                         </div>
-
                     </article>
-
                 </a>
-
             `;
-
-        });
+        };
 
     }
 
